@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Factorialls</h1>
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th style="text-align: center;">N</th>
+      <th style="text-align: left;">Log2 (26^n)!</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @factorialls.each do |factoriall| %>
+      <tr>
+        <td style="text-align: center;"><%= factoriall.n %></td>
+        <td style="text-align: left;"><%= factoriall.result %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factoriall', new_factoriall_path %>
